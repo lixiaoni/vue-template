@@ -1,0 +1,52 @@
+{
+    "name": "vue-template",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "dev": "npm run serve",
+        "build:dev": "vue-cli-service build --mode development",
+        "build:prd": "vue-cli-service build --mode production",
+        "lint": "alloylint './src/**/*'",
+        "eslint": "eslint --fix --ext .js,.vue src",
+        "format": "prettier --write \"src/**/*.js\" \"src/**/*.vue\"",
+        "format:check": "prettier --check \"src/**/*.js\" \"src/**/*.vue\""
+    },
+    "dependencies": {
+        "alloylint": "^0.1.2",
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11",
+        "vuex": "^3.6.0",
+        "yarn": "^1.22.10"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.8.0",
+        "eslint-config-alloy": "^3.10.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^7.4.1",
+        "husky": "^4.3.7",
+        "lint-staged": "^10.5.3",
+        "prettier": "2.2.1",
+        "vue-eslint-parser": "^7.3.0",
+        "vue-router": "^3.4.9",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix"
+    }
+}
