@@ -1,5 +1,5 @@
 <template>
-    <diV>new user page</diV>
+    <diV>new user page  288 热11</diV>
 </template>
 <script>
 export default {}
